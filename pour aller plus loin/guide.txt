@@ -1,0 +1,74 @@
+On veut réaliser un programme qui sera appelle avant le sprint 5, afin de nettoyer les commandes potentiellement corrompues dans le fichier in.
+
+Pour cela, le programme recevra le in corrompue (par redirection) et sortira sur stdout les commandes correctes, et sur stderr les commandes corrompues
+avec un commentaire de pourquoi elles sont considérées corrompues par le programme.
+
+On pourra le lancer comme suit :
+Pretraitement.exe <in_corrompu.txt 2>problemes.txt | Sprint5.exe > out.txt
+où
+ Pretraitement.exe est le nouveau programme réalisé,
+ in_corrompu.txt est le fichier contenant des commandes erronées
+ problemes.txt est le rapport d'erreur
+ Sprint5.exe est le programme du sprint precedent
+ out.txt est la sortie obtenu sur les commandes correctes
+
+
+Pour cela on commence par définir 6 catégories lexicale :
+
+		////format des identifiants : {lettre}+
+		////types : {TEXT/INT/FLOAT/DATE}
+		////format des text : {lettre/_}+
+		////format des entiers : {+/-}?{chiffre}+
+		////format des floats : {+/-}?{chiffre}+{.}{chiffre}*
+		////format des dates : {chiffre}1_2{/}{chiffre}1_2{/}{+/-}?{chiffre}+
+
+Ainsi, par exemple, on dit que les float sont composés d’un signe (éventuellement), suivi d’au moins un chiffre, suivi d’un point, et suivi (éventuellement) de chiffres. 
+Ou bien on dit qu’une date est composée d’un ou deux chiffres, suivis d’un slash, puis d’une ou deux chiffres, et a nouveau un slash, puis éventuellement un signe 
+et au moins un chiffre.
+
+On définit ensuite la grammaire qui explicite les contrôles à réaliser pour qu’une commande soit considérée correcte :
+
+		//Create_table identifiant entier (identifiant type)+
+		//    -->> contrôler la présence du nombre de champs annonces par l’entier
+
+		//Delete_table identifiant
+
+		//Afficher_schema identifiant
+
+		//Insert_enregistrement identifiant (pas_commande)+
+		//    -->> le nombre de champs requis n'est pas contrôlé
+		//    -->> la cohérence de type n'est pas contrôlée
+
+		//Afficher_enregistrement identifiant entier
+		//    -->> dernier argument entier >0
+
+		//Afficher_enregistrements identifiant
+
+		//Delete_enregistrement identifiant entier
+		//    -->> dernier argument entier >0
+
+		//Select_enregistrement identifiant (pas_commande)+
+
+		//Exit
+
+
+
+
+exemples d'erreurs et de comportement attendu:
+
+QERGFWSDVQSRAergq  
+provoque un message pour probleme.txt du type "commande inconnue >QERGFWSDVQSRAergq<"
+
+Afficher_schema 843
+provoque un message pour probleme.txt du type "afficher_schema attend un identifiant et recoit >843<"
+
+Afficher_schema Delete_table
+provoque un message pour probleme.txt du type "afficher_schema attend un identifiant et recoit >Delete_table<"
+(en effet les commandes et les noms de type doivent etre des noms reserves)
+
+Afficher_schema Delete_table Pays
+provoque un message pour probleme.txt du type "afficher_schema attend un identifiant et recoit >Delete_table<"
+ET accepte la commande "Delete_table Pays" comme valide
+
+
+

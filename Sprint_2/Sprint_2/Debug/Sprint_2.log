@@ -1,0 +1,7 @@
+﻿  Sprint_2.c
+c:\users\sacha\google drive\cours\iap\projet\sprint_2\sprint_2\sprint_2.c(72): warning C4018: '<' : incompatibilité signed/unsigned
+c:\users\sacha\google drive\cours\iap\projet\sprint_2\sprint_2\sprint_2.c(70): warning C4477: 'scanf' : la chaîne de format '%s' nécessite un argument de type 'char *', mais l'argument variadique 1 est de type 'const unsigned char *'
+c:\users\sacha\google drive\cours\iap\projet\sprint_2\sprint_2\sprint_2.c(82): warning C4018: '<' : incompatibilité signed/unsigned
+c:\users\sacha\google drive\cours\iap\projet\sprint_2\sprint_2\sprint_2.c(95): warning C4018: '<' : incompatibilité signed/unsigned
+c:\users\sacha\google drive\cours\iap\projet\sprint_2\sprint_2\sprint_2.c(111): warning C4018: '<' : incompatibilité signed/unsigned
+  Sprint_2.vcxproj -> C:\Users\Sacha\Google Drive\Cours\IAP\Projet\Sprint_3\Debug\Sprint_2.exe
