@@ -6,7 +6,7 @@ table de données. Huit commandes sont à programmer :
     - trois commandes de traitement d’une table (création, destruction, affichage de son schéma)
     - cinq commandes de manipulation des données d’une table déjà créée (insertion, suppression, sélection monocritère, affichage d’un enregistrement donné, affichage de tous les enregistrements). 
 
-**Quatre types de données sont manipulés dans ce projet : ** 
+** Quatre types de données sont manipulés dans ce projet : ** 
 
     - les entiers (INT)
     - les réels (FLOAT)
