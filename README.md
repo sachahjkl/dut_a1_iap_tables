@@ -17,10 +17,10 @@ table de données. Huit commandes sont à programmer :
 
 **Quatre types de données sont manipulés dans ce projet :** 
 
-    - les entiers (INT)
-    - les réels (FLOAT)
-    - les chaînes de caractères (TEXT) (Limitées par une taille MAX)
-    - les dates (DATE). 
+    * les entiers (INT)
+    * les réels (FLOAT)
+    * les chaînes de caractères (TEXT) (Limitées par une taille MAX)
+    * les dates (DATE). 
 
 L’application doit interpréter neuf commandes (huit commandes sur la table de donnée et une commande de sortie de l’interpréteur). 
 Celles-ci sont représentées sous forme de chaînes de caractères non accentuées de formats spécifiés dans ce document. 
