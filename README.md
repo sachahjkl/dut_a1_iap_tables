@@ -1,5 +1,3 @@
-[English](README.md) | [Français](README.fr.md)
-
 # dut_a1_iap_tables
 
 The project aims to program a command interpreter for a data table.
