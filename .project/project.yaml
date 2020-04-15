@@ -1,8 +1,0 @@
-name: "dut_a1_iap_tables"
-description: ""
-topics: []
-homepage: ""
-source:
-  provider: gitlab
-  namespace: "sachahjkl"
-  path: "sachahjkl/dut_a1_iap_tables"
