@@ -1,8 +1,0 @@
-table existante
-table inconnue
-Pays 5
-nom TEXT
-pib INT
-capitale TEXT
-latitude FLOAT
-longitude FLOAT
