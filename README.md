@@ -1,28 +1,30 @@
+[English](README.md) | [Français](README.fr.md)
+
 # dut_a1_iap_tables
 
-Le but du projet est de programmer un interpréteur de commandes sur une
-table de données. Huit commandes sont à programmer :
+The project aims to program a command interpreter for a data table.
+Eight commands must be programmed:
 
 
-    * trois commandes de traitement d’une table :
-        - création
-        - destruction
-        - affichage de son schéma
-    * cinq commandes de manipulation des données d’une table déjà créée :
+    * three commands for processing a table:
+        - creation
+        - deletion
+        - display of its schema
+    * five commands for manipulating data in an existing table:
         - insertion
-        - suppression
-        - sélection monocritère
-        - affichage d’un enregistrement donné
-        - affichage de tous les enregistrements
+        - deletion
+        - single-criterion selection
+        - display of a specified record
+        - display of all records
 
-**Quatre types de données sont manipulés dans ce projet :** 
+**This project handles four data types:**
 
-    * les entiers (INT)
-    * les réels (FLOAT)
-    * les chaînes de caractères (TEXT) (Limitées par une taille MAX)
-    * les dates (DATE). 
+    * integers (INT)
+    * real numbers (FLOAT)
+    * character strings (TEXT) (limited by a MAX size)
+    * dates (DATE).
 
-L’application doit interpréter neuf commandes (huit commandes sur la table de donnée et une commande de sortie de l’interpréteur). 
-Celles-ci sont représentées sous forme de chaînes de caractères non accentuées de formats spécifiés dans ce document. 
-Le caractère séparateur entre la commande et les différents champs d’information est le caractère espace.
-Les commandes pourront être soit entrées en utilisant l’entrée standard (le clavier) ou par redirection d’un fichier texte sur l’entrée standard.
+The application must interpret nine commands: eight data table commands and one command to exit the interpreter.
+These commands are represented as unaccented character strings in the formats specified in this document.
+The separator between the command and the different information fields is the space character.
+Commands can be entered through standard input (the keyboard) or by redirecting a text file to standard input.
